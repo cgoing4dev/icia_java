@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/w3-theme-ev.css">
+<body>
+
+<div class="w3-auto">
+
+    <div class="w3-bar w3-large w3-theme">
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Home</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 3</a>
+    </div>
+
+    
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+1" style="width:100%">
+        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+2" style="width:100%">
+        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+3" style="width:100%">
+        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+4" style="width:100%">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>  
+
+</div>
+  
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</body>
+</html>
