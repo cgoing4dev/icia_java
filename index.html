@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/w3-theme-ev.css">
-<body>
+  <head>
+    <title>electric life</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/w3-theme-ev.css" />
+    <link rel="stylesheet" href="css/cgoing.css" />
+    <script src="js/w3.js"></script>
+  </head>
+  <body>
+    <div class="w3-auto">
+      <!-- 헤더, 내비 영역 -->
+      <div w3-include-html="nav.html"></div>
+      <script>
+        w3.includeHTML();
+      </script>
 
-<div class="w3-auto">
+      <!-- 슬라이드 영역 -->
+      <div class="w3-content w3-display-container">
+        <img class="evList" src="images/ev1.jpg" style="width: 100%" />
+        <img class="evList" src="images/ev2.jpg" style="width: 100%" />
+        <img class="evList" src="images/ev3.jpg" style="width: 100%" />
+        <button
+          class="w3-button w3-black w3-display-left"
+          onclick="myShow.previous()">
+          &#10094;
+        </button>
+        <button
+          class="w3-button w3-black w3-display-right"
+          onclick="myShow.next()">
+          &#10095;
+        </button>
+      </div>
 
-    <div class="w3-bar w3-large w3-theme">
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Home</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button w3-mobile w3-padding-16">Link 3</a>
+      <article class="w3-container">
+        <h2>아티클</h2>
+        <p>Article information goes here</p>
+      </article>
+
+      <!-- 푸터 영역 -->
+      <div w3-include-html="footer.html"></div>
+      <script>
+        w3.includeHTML();
+      </script>
     </div>
 
-    
-    <div class="w3-content w3-display-container">
-        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+1" style="width:100%">
-        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+2" style="width:100%">
-        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+3" style="width:100%">
-        <img class="mySlides" src="https://via.placeholder.com/1140x200?text=fakeImage+4" style="width:100%">
-      
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>  
-
-</div>
-  
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-</body>
+    <script>
+      var myShow = w3.slideshow(".evList", 0);
+    </script>
+  </body>
 </html>

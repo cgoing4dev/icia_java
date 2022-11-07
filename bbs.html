@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>electric life</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/w3.css" />
+    <link rel="stylesheet" href="css/w3-theme-ev.css" />
+    <link rel="stylesheet" href="css/cgoing.css" />
+    <script src="js/w3.js"></script>
+  </head>
+  <body>
+    <div class="w3-auto">
+      <!-- 헤더, 내비 영역 -->
+      <div w3-include-html="nav.html"></div>
+      <script>
+        w3.includeHTML();
+      </script>
+
+      <div class="w3-row">
+        <!-- 사이드바 영역 -->
+        <div class="w3-col m2 l2">
+          <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button">자유게시판</a>
+            <a href="#" class="w3-bar-item w3-button">이슈토론방</a>
+            <a href="#" class="w3-bar-item w3-button">소모임</a>
+            <a href="#" class="w3-bar-item w3-button">갤러리</a>
+          </div>
+        </div>
+        <!-- 게시판 테이블 영역 -->
+        <div id="bbsTable" class="w3-col m10 l10">
+          <div class="w3-panel w3-border w3-round-xlarge">
+            <p class="w3-center">자유게시판</p>
+          </div>
+          <table class="w3-table w3-bordered">
+            <tr>
+              <th>글번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>추천</th>
+              <th>조회</th>
+            </tr>
+            <tr>
+              <td>no.</td>
+              <!-- 상세페이지 링크 -->
+              <!-- view.jsp로 바꾸고 request 객체에 넣어서 해보셈.(view.jsp?id=cgoing&~~~~) 뽐뿌 자유게시판 참고해보셈 -->
+              <td><a href="view.html">title</a></td>
+              <td>writer</td>
+              <td>writeDate</td>
+              <td>recommend</td>
+              <td>hits</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 푸터 영역 -->
+      <div w3-include-html="footer.html"></div>
+      <script>
+        w3.includeHTML();
+      </script>
+    </div>
+  </body>
+</html>
